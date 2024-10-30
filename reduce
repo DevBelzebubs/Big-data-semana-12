@@ -1,9 +1,0 @@
-from pyspark import SparkContext
-
-sc = SparkContext.getOrCreate()
-
-numeros = sc.parallelize([1, 2, 3, 4, 5])
-
-suma = numeros.reduce(lambda a, b: a + b)
-
-print(suma)
